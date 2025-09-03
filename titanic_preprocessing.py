@@ -73,8 +73,8 @@ ct = ColumnTransformer(transformers=[('encode',OneHotEncoder(),['Embarked'])],re
 X_train_array = ct.fit_transform(X_train)
 X_test_array = ct.transform(X_test)
 features_name = ct.get_feature_names_out()
-X_train = pd.DataFrame(X_train_array,columns = feature_name)
-X_test = pd.DataFrame(X_test_array,columns=feature_name)
+X_train = pd.DataFrame(X_train_array,columns = features_name)
+X_test = pd.DataFrame(X_test_array,columns=features_name)
 
 X_train
 
